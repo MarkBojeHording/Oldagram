@@ -1,23 +1,95 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    font-family: "Source Sans 3", serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans 3", serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   border-bottom: 2px solid #ccc;
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
 }
 
 .profile {
   width: 50px;
   border-radius: 50%;
   height: 34;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-top: 40px;
+}
+
+
+.text-container {
+  margin-top: 10px;
+}
+
+.main-logo {
+  width: 50px;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.name {
+  font-size: 16px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+.city {
+  font-size: 16px;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.main-pic {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.images-container {
+  width: 2px;
+  display: flex;
+  margin: 10px;
+
+}
+
+.image {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.likes {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.comment {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.last-container {
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+
+.mushroom {
+  font-weight: 400;
 }
