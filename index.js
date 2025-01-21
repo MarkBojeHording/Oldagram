@@ -29,20 +29,57 @@ const posts = [
 ];
 
 document.addEventListener("DOMContentLoaded", function() {
-  const nameElement = document.getElementById("name");
-  const cityElement = document.getElementById("city");
-  const avatarElement = document.getElementById("avatar");
-  const postElement = document.getElementById("post");
-  const commentElement = document.getElementById("comment");
-  const likesElement = document.getElementById("likes");
+  document.getElementById("name").textContent = posts[0].name;
+  document.getElementById("city").textContent = posts[0].location;
+  document.getElementById("avatar").src = posts[0].avatar;
+  document.getElementById("post").src = posts[0].post;
+  document.getElementById("likes").textContent = `${posts[0].likes} likes`;
+  document.getElementById("comment").innerHTML = `<strong>${posts[0].username}</strong> <span class="mushroom">${posts[0].comment}</span>`;
 
-  if (nameElement) nameElement.textContent = posts[0].name;
-  if (cityElement) cityElement.textContent = posts[0].location;
-  if (avatarElement) avatarElement.src = posts[0].avatar;
-  if (postElement) postElement.src = posts[0].post;
-  if (likesElement) likesElement.textContent = `${posts[0].likes} likes`;
+  const main = document.querySelector("main");
 
-  if (commentElement) {
-      commentElement.innerHTML = `<strong>${posts[0].username}</strong> <span class="mushroom">${posts[0].comment}</span>`;
+  for (let i = 1; i < posts.length; i++) {
+    let post = posts[i];
+
+    const postHTML =
+    ` <div class="main-container">
+          <img class="main-logo" src="${post.avatar}" alt="Profile Picture">
+          <div class="text-container">
+              <h1 class="name">${post.name}</h1>
+              <h2 class="city">${post.location}</h2>
+          </div>
+      </div>
+
+      <div>
+          <img class="main-pic" src="${post.post}" alt="Post Image">
+      </div>
+
+      <div class="bottom-container">
+          <div class="images-container">
+              <img class="image" src="images/icon-heart.png" alt="A heart symbol">
+              <img class="image" src="images/icon-comment.png" alt="A comment symbol">
+              <img class="image" src="images/icon-dm.png" alt="A dm symbol">
+          </div>
+
+          <div class="last-container">
+              <p class="likes">${post.likes} likes</p>
+              <p class="comment"><strong>${post.username}</strong> <span class="mushroom">${post.comment}</span></p>
+          </div>
+      </div>
+      <hr> `;
+
+    main.innerHTML += postHTML;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const post = document.getElementById("post");
+
+  if (post) {
+      post.addEventListener("dblclick", function () {
+          console.log("Post was double-clicked!");
+      });
+  } else {
+      console.error("Element with id 'post' not found!");
   }
 });
