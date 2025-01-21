@@ -71,8 +71,14 @@ header {
 
 .image {
   width: 30px;
-  height: auto;
+  height: 30px;
   margin-right: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.image:hover {
+  transform: rotate(25deg);
 }
 
 .likes {
