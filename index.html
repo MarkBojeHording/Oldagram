@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <head>
-      <title></title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-      <div>
-        <header>
-          <img class="logo" src="images/logo.png">
-          <img class="profile" src="images/Profile.jpg" alt="Picture of user Mark Hording">
-        </header>
-      <main>
+<html lang="en">
+<head>
+    <title>Art Post</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo.png">
+        <img class="profile" src="images/Profile.jpg" alt="Picture of user Mark Hording">
+    </header>
+
+    <main>
         <div class="main-container">
-          <img class="main-logo" src="images/avatar-vangogh.jpg" alt="Logo of Van Gogh">
-        <div class="text-container">
-          <h1 class="name">Vincent Van Gogh</h1>
-          <h2 class="city">Zundert, Netherlands</h2>
-      </div>
-      </div>
-        <div>
-          <img class="main-pic" src="images/post-vangogh.jpg" alt="Picture of Van Gogh">
+            <img class="main-logo" id="avatar" src="" alt="Profile Picture">
+            <div class="text-container">
+                <h1 class="name" id="name"></h1>
+                <h2 class="city" id="city"></h2>
+            </div>
         </div>
+
         <div>
-          <div class="bottom-container">
+            <img class="main-pic" id="post" src="" alt="Post Image">
+        </div>
+
+        <div class="bottom-container">
             <div class="images-container">
-              <img class="image" src="images/icon-heart.png" alt="A heart symbol">
-              <img class="image" src="images/icon-comment.png" alt="A comment symbol">
-              <img class="image" src="images/icon-dm.png" alt="A dm symbol">
+                <img class="image" src="images/icon-heart.png" alt="A heart symbol">
+                <img class="image" src="images/icon-comment.png" alt="A comment symbol">
+                <img class="image" src="images/icon-dm.png" alt="A dm symbol">
             </div>
+
             <div class="last-container">
-                <p class="likes">21,492 likes</p>
-                <p class="comment">vincey1853 <span class="mushroom">just took a few mushrooms lol</span></p>
+                <p class="likes" id="likes"></p>
+                <p class="comment" id="comment"></p>
             </div>
         </div>
-      </main>
-    </div>
-        <script src="index.js"></script>
-    </body>
+    </main>
+
+    <script src="index.js"></script>
+</body>
 </html>
